@@ -1,0 +1,63 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #4A90E2, #007AFF);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: #003E9B; /* Darker blue when scrolled */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.menu li a:hover {
+    color: #FFD700; /* Gold on hover */
+    transform: scale(1.1);
+}
+
+/* Section Styling */
+section {
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background: #f4f4f4;
+    margin-top: 5rem; /* Offset for fixed navbar */
+}
+
+section:nth-child(even) {
+    background: #eaeaea;
+}
